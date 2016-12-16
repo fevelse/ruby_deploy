@@ -1,2 +1,0 @@
-# ruby_pro
-products

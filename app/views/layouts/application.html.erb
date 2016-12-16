@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ProductDashboard</title>
+  <title>Beltexam</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div class="container">
+<% if flash[:errors] %>
+		<% flash[:errors].each do |flash| %>
+			<p class="bg-danger"><%= flash %></p>
+		<%end%>
+	<%end%>
 <%= yield %>
-
+</div>
 </body>
 </html>
